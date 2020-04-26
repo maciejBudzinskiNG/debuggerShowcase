@@ -24,7 +24,8 @@ const spices = [
 
 const getRandomAnimal = () => {
   const randomNumber = Math.ceil(Math.random() * spices.length);
-  return spices[randomNumber].animal;
+  const randomAnimal = spices[randomNumber];
+  return randomAnimal;
 };
 
 const App = () => {
@@ -51,8 +52,8 @@ const App = () => {
             </Text>
           )}
           {animals.length > 0 &&
-            animals.map((animal, index) => (
-              <Text key={index} style={styles.animal}>
+            animals.map(({animal, id}) => (
+              <Text key={Date.now()} style={styles.animal}>
                 {animal}
               </Text>
             ))}

@@ -9,21 +9,82 @@
       "cwd": "${workspaceFolder}",
       "type": "reactnative",
       "request": "launch",
-      "platform": "android"
+      "platform": "android",
+      "target": "emulator-5556"
     },
     {
       "name": "Debug iOS",
       "cwd": "${workspaceFolder}",
       "type": "reactnative",
+      "platform": "ios",
       "request": "launch",
-      "platform": "ios"
+      "skipFiles": [
+        "node_modules/**",
+        "internal/**",
+        ".vscode/.react/debuggerWorker.js",
+        "_stream_duplex.js",
+        "_stream_passthrought.js",
+        "_stream_readable.js",
+        "_stream_transfrom.js",
+        "_stream_writable.js",
+        "async_hooks.js",
+        "buffer.js",
+        "child_process.js",
+        "dgram.js",
+        "events.js",
+        "fs.js",
+        "internal/**",
+        "net.js",
+        "path.js",
+        "string_decoder.js",
+        "timers.js",
+        "url.js",
+        "v8.js",
+        "vm.js",
+        "<eval>/**",
+      ]
+    },
+    {
+      "name": "Debug iOS Device",
+      "cwd": "${workspaceFolder}",
+      "type": "reactnative",
+      "request": "launch",
+      "platform": "ios",
+      "target": "device=iPhone (Maciej) (13.3.1)",
+      "skipFiles": [
+        "node_modules"
+      ]
     },
     {
       "name": "Attach to packager",
       "cwd": "${workspaceFolder}",
       "type": "reactnative",
       "request": "attach",
-      "skipFiles": ["node_modules"]
+      "skipFiles": [
+        "node_modules/**",
+        "internal/**",
+        ".vscode/.react/debuggerWorker.js",
+        "_stream_duplex.js",
+        "_stream_passthrought.js",
+        "_stream_readable.js",
+        "_stream_transfrom.js",
+        "_stream_writable.js",
+        "async_hooks.js",
+        "buffer.js",
+        "child_process.js",
+        "dgram.js",
+        "events.js",
+        "fs.js",
+        "internal/**",
+        "net.js",
+        "path.js",
+        "string_decoder.js",
+        "timers.js",
+        "url.js",
+        "v8.js",
+        "vm.js",
+        "<eval>/**",
+      ]
     }
   ]
 }
