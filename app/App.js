@@ -52,8 +52,8 @@ const App = () => {
             </Text>
           )}
           {animals.length > 0 &&
-            animals.map(({animal, id}) => (
-              <Text key={Date.now()} style={styles.animal}>
+            animals.map(({animal}, index) => (
+              <Text key={index} style={styles.animal}>
                 {animal}
               </Text>
             ))}
@@ -118,6 +118,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'space-between',
+    padding: 16,
   },
 });
 
